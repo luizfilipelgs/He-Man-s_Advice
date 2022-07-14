@@ -27,7 +27,6 @@ const addText = (adviceMsg) => {
 //window.onload = () => addText();
 /*
 const typeWrite = (adviceMsg) => {
-
     const textArray = adviceMsg.split(' ');
     const arrays = textArray.map((element) => element.split(''))
     textArray.forEach((palavras, ind) => {
