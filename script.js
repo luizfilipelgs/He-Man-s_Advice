@@ -1,7 +1,7 @@
 //const fetch = require('node-fetch');
 
 const getRandomAdvice = async () => {
-  
+
   try {
     const url = 'https://api.adviceslip.com/advice';
     const response = await fetch(url);
@@ -12,7 +12,7 @@ const getRandomAdvice = async () => {
     return advice;
   } catch(error) {
     console.log(`Algo deu errado :( \n${error}`);
-  } 
+  }
 }
 getRandomAdvice();
 
@@ -26,9 +26,7 @@ const addText = (adviceMsg) => {
 //addText();
 //window.onload = () => addText();
 
-
-
-/* 
+/*
 const typeWrite = (adviceMsg) => {
 
     const textArray = adviceMsg.split(' ');
@@ -39,9 +37,8 @@ const typeWrite = (adviceMsg) => {
            document.getElementById('adviceText1').innerText += letra
           if (i === array.length -1) {
             document.getElementById('adviceText1').innerText += ' ';
-          } 
+          }
         })
        } , 100 * ind)
     });
 } */
-
