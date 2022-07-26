@@ -1,20 +1,16 @@
-//const fetch = require('node-fetch');
-
 const getRandomAdvice = async () => {
-  
+
   try {
     const url = 'https://api.adviceslip.com/advice';
     const response = await fetch(url);
     const data = await response.json();
     const advice = data.slip.advice;
-    //typeWrite(advice);
     addText(advice);
     return advice;
   } catch(error) {
     console.log(`Algo deu errado :( \n${error}`);
-  } 
+  }
 }
-
 
 const addText = (adviceMsg) => {
     console.log(adviceMsg);
@@ -41,3 +37,4 @@ const addListenerBTN = () => {
 window.onload = () => {
   getRandomAdvice();
 }
+
