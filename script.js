@@ -14,34 +14,30 @@ const getRandomAdvice = async () => {
     console.log(`Algo deu errado :( \n${error}`);
   } 
 }
-getRandomAdvice();
+
 
 const addText = (adviceMsg) => {
-  //const adviceMsg = await getRandomAdvice();
-  //console.log(await dataAdvc);
-  console.log(adviceMsg);
-  document.getElementById('adviceText1').innerText = adviceMsg;
+    console.log(adviceMsg);
+  const advText = document.getElementById('adviceText1')
+  advText.innerText = adviceMsg;
+  typeWriter(advText);
 }
 
-//addText();
-//window.onload = () => addText();
+const typeWriter = (elemento) => {
+  const textoArray = elemento.innerHTML.split('');
+  elemento.innerHTML = '';
+  textoArray.forEach((letra, i) => {
+    setTimeout(() => elemento.innerHTML += letra, 75 * i);
+  });
+}
 
+const teste = () => console.log('teste listener ok');
 
+const addListenerBTN = () => {
+  const btn = document.querySelector('.reset');
+  btn.addEventListener('click', teste)
+}
 
-/* 
-const typeWrite = (adviceMsg) => {
-
-    const textArray = adviceMsg.split(' ');
-    const arrays = textArray.map((element) => element.split(''))
-    textArray.forEach((palavras, ind) => {
-      setTimeout(() => {
-        palavras.split('').forEach((letra, i, array) => {
-           document.getElementById('adviceText1').innerText += letra
-          if (i === array.length -1) {
-            document.getElementById('adviceText1').innerText += ' ';
-          } 
-        })
-       } , 100 * ind)
-    });
-} */
-
+window.onload = () => {
+  getRandomAdvice();
+}

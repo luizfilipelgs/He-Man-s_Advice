@@ -50,6 +50,17 @@ main {
 
 #adviceText1 {
 color: white;
+font-size: 20px;
+}
+
+#msgEnd {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    position: absolute;
+    left: 720px;
+    top: 450px;
 }
 
 footer {
@@ -60,4 +71,8 @@ footer {
     justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
+}
+
+.reset {
+    margin: 5px;
 }
